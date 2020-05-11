@@ -3,6 +3,16 @@ An API based server traffic generator.
 
 Traffic Mirror can generate different sizes of correct responses and errors with different codes. This is useful if you are testing load balancers or kubernetes services.
 
+Main features: 
+* Generate outbound traffic with different latency and size just by changing the url
+* Generate different error codes just by changing the url
+* Locust script to automate the traffic generation
+* Support for POST method to generate inbound traffic 
+* Docker image available for local or kubernetes deployment
+* Lightweight
+* Written in Go
+* Free and open source (GPL)
+
 # Installation
 From docker image:
 ```
