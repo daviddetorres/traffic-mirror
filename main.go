@@ -21,6 +21,7 @@ func NewRouter() *httprouter.Router {
 
 func registerRouter(router *httprouter.Router) {
 	router.GET("/ok/:milliseconds/:bytes", returnOk)
+	router.POST("/ok/:milliseconds/:bytes", returnOk)
 	router.GET("/error/:code", returnError)
 	router.GET("/", returnHome)
 }

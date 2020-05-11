@@ -15,7 +15,6 @@ Building your source code
 ```
 git clone https://github.com/daviddetorres/traffic-mirror
 go build main.go -o traffic-mirror
-
 ```
 
 # Usage
@@ -46,7 +45,7 @@ locust -f traffic-generator.py --no-web -c 10 -r 10 -H http://localhost:8080
 
 With a Docker image:
 ```
-docker run -ti --rm \s
+docker run -ti --rm \
   --net='host' \
   --volume $PWD:/mnt/locust \
   -e LOCUSTFILE_PATH=/mnt/locust/traffic-generator.py \

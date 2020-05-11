@@ -36,6 +36,19 @@ class MyTaskSet(TaskSet):
   @task(10)
   def HighLatencyHeavyWeight(self):
       self.client.get("/ok/5000/5000000")
+
+  @task(100)
+  def LightWeightPost(self):
+      self.client.post("/ok/0/0",{"data":"0"*500})
+
+  @task(100)
+  def MediumWeightPost(self):
+      self.client.post("/ok/0/0",{"data":"0"*50000})
+
+  @task(20)
+  def HeavyWeightPost(self):
+      self.client.post("/ok/0/0",{"data":"0"*5000000})
+
   @task(10)
   def Error404(self):
     self.client.get("/error/404")
