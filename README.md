@@ -73,5 +73,5 @@ docker run -ti --rm \
   -e LOCUSTFILE_PATH=/mnt/locust/traffic-generator.py \
   -e TARGET_URL=http://localhost:8080 \
   -e LOCUST_OPTS="--no-web -c 10 -r 10 " \
-  locustio/locust
+  locustio/locust:0.14.4
 ```

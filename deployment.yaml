@@ -55,7 +55,7 @@ spec:
         app: generator
     spec:
       containers:
-      - image: locustio/locust
+      - image: locustio/locust:0.14.4
         imagePullPolicy: IfNotPresent
         name: locust
         env:
